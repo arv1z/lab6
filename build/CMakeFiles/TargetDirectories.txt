@@ -1,8 +1,0 @@
-/home/sasha/lab5/build/CMakeFiles/edit_cache.dir
-/home/sasha/lab5/build/CMakeFiles/rebuild_cache.dir
-/home/sasha/lab5/build/file/CMakeFiles/calc.dir
-/home/sasha/lab5/build/file/CMakeFiles/edit_cache.dir
-/home/sasha/lab5/build/file/CMakeFiles/rebuild_cache.dir
-/home/sasha/lab5/build/TEST/CMakeFiles/check.dir
-/home/sasha/lab5/build/TEST/CMakeFiles/edit_cache.dir
-/home/sasha/lab5/build/TEST/CMakeFiles/rebuild_cache.dir
