@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(lab05)
+project(lab6)
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -23,3 +23,4 @@ if(BUILD_TESTS)
 
     add_test(NAME check COMMAND check)
 endif()
+include(CPackConfig.cmake)
