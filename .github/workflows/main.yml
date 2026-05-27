@@ -16,7 +16,7 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt update
-        sudo apt install -y cmake g++ libgtest-dev
+        sudo apt install -y cmake g++ libgtest-dev libgmock-dev
 
     - name: Configure
       run: |
