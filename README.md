@@ -1,27 +1,24 @@
-# lab05
+# Homework lab6
 
-## Задание
+## Khramov Aleksandr (IU8-23)
 
-1. Создайте `CMakeLists.txt` для библиотеки *banking*.
+После того, как вы настроили взаимодействие с системой непрерывной интеграции,
+обеспечив автоматическую сборку и тестирование ваших изменений, стоит задуматься
+о создание пакетов для изменений, которые помечаются тэгами (см. вкладку [releases](../../releases)).
+Пакет должен содержать приложение `solver` из [предыдущего задания](../lab05).
+Таким образом, каждый новый релиз будет состоять из следующих компонентов:
 
-See the file [CMakeLists.txt](CMakeLists.txt)
+- архивы с файлами исходного кода (`.tar.gz`, `.zip`)
+- пакеты с бинарным файлом `solver` (`.deb`, `.rpm`, `.msi`, `.dmg`)
 
-File already includes test building with a BUILD_TESTS flag
+Для этого нужно добавить ветвление в конфигурационные файлы для CI
+со следующей логикой:
 
-2. Создайте модульные тесты на классы `Transaction` и `Account`.
+если commit помечен тэгом, то необходимо собрать пакеты
+(`DEB`, `RPM`, `WIX`, `DragNDrop`, ...)
+и разместить их на сервисе GitHub.
 
-   - Используйте mock-объекты.
-   - Покрытие кода должно составлять 100%.
+## Главные файлы в этой лабораторной работе
 
-See the file [test.cpp](tests/test.cpp)
-
-3. Настройте сборочную процедуру на **GitHub Actions**.
-
-See the [file](.github/workflows/main.yml) for GitHub Actions CI
-
-4. Настройте Coveralls.io.
-
-![Tests](https://img.shields.io/badge/Tests-passing-brightgreen)
-![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen)
-
-> finally it works!! I spent 4 hours troubleshooting...
+- Обновлённый [CMakeLists.txt](CMakeLists.txt) с импортом конфигураций для `CPack`
+- Создание релизов: [.github/workflows/release.yml](.github/workflows/release.yml)
